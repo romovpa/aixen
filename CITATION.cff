@@ -1,0 +1,18 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: aixen
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Peter
+    family-names: Romov
+    email: peter@romov.com
+repository-code: 'https://github.com/romovpa/aixen'
+abstract: AI Engineering Framework
+keywords:
+  - ai
+license: Apache-2.0

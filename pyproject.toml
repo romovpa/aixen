@@ -1,0 +1,64 @@
+[project]
+name = "aixen"
+description = "A framework for AI engineering"
+readme = "README.md"
+authors = [
+    { name = "Peter Romov", email = "peter@romov.com" }
+]
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+]
+dynamic = ["version"]
+
+dependencies = [
+    "pydantic~=2.8",
+    "httpx~=0.27",
+    "python-dotenv~=1.0",
+    "python-slugify~=8.0",
+    "loguru~=0.7",
+
+    # apis
+    "openai~=1.35",
+    "replicate~=0.26",
+]
+
+
+[project.urls]
+"Homepage" = "https://github.com/romovpa/aixen"
+"Repository" = "https://github.com/romovpa/aixen"
+"Issue Tracker" = "https://github.com/romovpa/aixen/issues"
+
+
+[build-system]
+requires = ["setuptools>=64", "wheel", "setuptools_scm"]
+build-backend = "setuptools.build_meta"
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+
+[tool.setuptools_scm]
+version_scheme = "post-release"
+local_scheme = "node-and-timestamp"
+version_file = "src/aixen/_version.py"
+
+
+[tool.ruff.lint]
+select = [
+    "E",    # All Pyflakes error codes
+    "F",    # Pyflakes error codes
+    "I",    # isort import sorting
+    "B",    # flake8-bugbear codes
+    #"A",    # flake8-builtins codes
+    #"S",    # Security-related codes
+    "UP",   # pyupgrade codes
+    "T",    # Type annotations checks
+    #"ANN",  # More comprehensive type annotations checks
+    "UP",   # pyupgrade
+    "C4",   # Cyclomatic complexity checks
+    "W",    # Additional warnings
+]
