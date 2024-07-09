@@ -178,7 +178,8 @@ class Context:
             os.makedirs(self.context_dir, exist_ok=True)
         else:
             self._temp_dir = TemporaryDirectory(
-                prefix="context-", suffix=f"-{self.id}", delete=not keep_files
+                prefix="context-",
+                suffix=f"-{self.id}",
             )
             self.context_dir = self._temp_dir.name
         self._file_index = 0

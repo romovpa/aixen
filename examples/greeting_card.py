@@ -5,6 +5,8 @@ import webbrowser
 import aixen as ai
 import httpx
 import pygame
+from aixen.apis.image import replicate_generate
+from aixen.apis.voice import elevenlabs_generate
 from bs4 import BeautifulSoup
 from pydantic import AnyUrl, BaseModel, Field
 
@@ -50,8 +52,8 @@ if __name__ == "__main__":
 
         card = greet(name)
 
-        voice = ai.apis.voice.elevenlabs_generate(card.text)
-        image_url = ai.apis.image.replicate_generate(card.image_description)
+        voice = elevenlabs_generate(card.text)
+        image_url = replicate_generate(card.image_description)
 
         print("Greeting:", card.text)
         print("Image description:", card.image_description)
