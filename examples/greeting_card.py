@@ -8,7 +8,7 @@ import pygame
 from aixen.apis.image import replicate_generate
 from aixen.apis.voice import elevenlabs_generate
 from bs4 import BeautifulSoup
-from pydantic import AnyUrl, BaseModel, Field
+from pydantic import BaseModel, Field, HttpUrl
 
 
 class GreetingCard(BaseModel):
@@ -26,7 +26,7 @@ class GreetingCard(BaseModel):
 
 
 @ai.fn
-def get_name_from_github(url: AnyUrl) -> str | None:
+def get_name_from_github(url: HttpUrl) -> str | None:
     """
     Extracts the user's name from a GitHub profile page.
     """
@@ -44,6 +44,16 @@ def greet(name: str) -> GreetingCard:
     """
 
 
+@ai.chat_fn
+def describe_image(image_url: HttpUrl) -> str:
+    """
+    Describe the image
+
+    <|user|>
+    {{ image_url | image(max_dim=512) }}
+    """
+
+
 if __name__ == "__main__":
     url = "https://github.com/simonw"
 
@@ -54,11 +64,13 @@ if __name__ == "__main__":
 
         voice = elevenlabs_generate(card.text)
         image_url = replicate_generate(card.image_description)
+        image_descr = describe_image(image_url)
 
         print("Greeting:", card.text)
         print("Image description:", card.image_description)
         print("Audio:", voice.audio_file.local_path)
         print("Image:", image_url)
+        print("Image description:", image_descr)
 
         print(f"Cost: ${context.usage_cost_usd}")
 

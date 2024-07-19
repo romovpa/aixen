@@ -1,8 +1,5 @@
 import importlib.resources as pkg_resources
-import inspect
 import json
-from collections.abc import Callable
-from functools import wraps
 from typing import TypeVar
 
 import httpx
@@ -12,7 +9,6 @@ from openai.types.chat import ChatCompletion
 
 from aixen.context import (
     Context,
-    MixedDictPydanticJSONEncoder,
     Usage,
     get_context,
     processor,
@@ -50,7 +46,7 @@ DEFAULT_PROVIDER = "openai"  # TODO Maybe change to "openrouter"
 
 
 CHAT_COMPLETION_PRICING = {}
-with pkg_resources.open_text(__package__, "chat_pricing.json") as f:
+with pkg_resources.open_text(__package__, "pricing.json") as f:
     CHAT_COMPLETION_PRICING = json.load(f)
 
 
@@ -138,47 +134,6 @@ def chat_generate_structured(
     return result.answer
 
 
-def chat_func(func: Callable, model: str | None = None) -> Callable:
-    """
-    Decorator that converts creates LLM-based processor based on function signature
-    and docstring.
-    """
-    sig = inspect.signature(func)
-    output_type = sig.return_annotation
-
-    @wraps(func)
-    def wrapper(*args, **kwargs):
-        system_prompt = func.__doc__
-
-        bound_args = sig.bind(*args, **kwargs)
-        bound_args.apply_defaults()
-
-        query_parts = []
-        for name, value in bound_args.arguments.items():
-            if isinstance(value, str):
-                query_parts.append(f"{name}: {value}")
-            else:
-                data = json.dumps(value, cls=MixedDictPydanticJSONEncoder)
-                query_parts.append(f"{name}: {data}")
-        query = "\n\n".join(query_parts)
-
-        if issubclass(output_type, str):
-            return chat_generate(
-                system=system_prompt,
-                messages=[{"role": "user", "content": query}],
-                model_name=model,
-            )
-        else:
-            return chat_generate_structured(
-                system=system_prompt,
-                messages=[{"role": "user", "content": query}],
-                model_name=model,
-                output_type=output_type,
-            )
-
-    return processor(wrapper)
-
-
 def _resolve_provider(context: Context, model_name: str) -> tuple[OpenAI, str]:
     """
     Creates a client from the model_name.
@@ -245,7 +200,7 @@ def _fetch_openrouter_pricing():
             alternative_name = model[separator + 1 :]
             pricing[alternative_name] = model_pricing
 
-    with open("src/aixen/apis/chat_pricing.json", "w") as f:
+    with open("src/aixen/apis/chat/pricing.json", "w") as f:
         json.dump(pricing, f, indent=4)
 
 
