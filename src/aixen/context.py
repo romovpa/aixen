@@ -34,12 +34,33 @@ class File(RootModel[str]):
 
     @property
     def local_path(self) -> Path:
-        context = Context.get_current()
-        return context.local_path(self.id)
+        context = get_context()
+
+        if self.id.startswith("rel-path:"):
+            return Path(context.context_dir) / self.id[len("rel-path:") :]
+
+        separator_index = self.id.find(os.sep)
+        parent_dir = self.id[:separator_index] if separator_index >= 0 else ""
+        if parent_dir != context.id:
+            raise NotImplementedError(
+                "Opening files from other contexts is not supported"
+            )
+        relative_path = (
+            self.id[separator_index + 1 :] if separator_index >= 0 else self.id
+        )
+        return Path(context.context_dir) / relative_path
 
     def open(self, *args, **kwargs) -> Any:
-        context = Context.get_current()
+        context = get_context()
         return context.open(self.id, *args, **kwargs)
+
+    @staticmethod
+    def from_local_file(path: Path | str) -> "File":
+        if not isinstance(path, Path):
+            path = Path(path)
+        context = Context.get_current()
+        relative_path = os.path.relpath(path, context.context_dir)
+        return File(f"rel-path:{relative_path}")
 
 
 class Context:
@@ -295,24 +316,16 @@ class Context:
         DEPRECATED: Use the File object instead.
         Get the local file path from the file ID.
         """
-        separator_index = file_id.find(os.sep)
-        parent_dir = file_id[:separator_index] if separator_index >= 0 else ""
-        if parent_dir != self.id:
-            raise NotImplementedError(
-                "Opening files from other contexts is not supported"
-            )
-        relative_path = (
-            file_id[separator_index + 1 :] if separator_index >= 0 else file_id
-        )
-        return Path(self.context_dir) / relative_path
+        with self:
+            return File(file_id).local_path
 
     def open(self, file_id: str, *args, **kwargs) -> Any:
         """
         DEPRECATED: Use the File object instead.
         Open a file from the project directory.
         """
-        file_path = self.local_path(file_id)
-        return open(file_path, *args, **kwargs)
+        with self:
+            return File(file_id).open(*args, **kwargs)
 
     @staticmethod
     def record(**kwargs) -> None:

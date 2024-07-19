@@ -4,7 +4,8 @@ import httpx
 from loguru import logger
 from pydantic import BaseModel
 
-from aixen.context import File, Usage, get_context, processor, save
+from aixen import File
+from aixen.context import Usage, get_context, processor, save
 
 ELEVENLABS_DEFAULT_MODEL = "eleven_turbo_v2"
 ELEVENLABS_DEFAULT_VOICE = "pNInz6obpgDQGcFmaJgB"
