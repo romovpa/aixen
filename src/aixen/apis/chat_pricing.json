@@ -1,13 +1,109 @@
 {
+    "mistralai/mistral-nemo": {
+        "prompt": 3e-07,
+        "completion": 3e-07,
+        "image": 0.0,
+        "request": 0.0
+    },
+    "mistral-nemo": {
+        "prompt": 3e-07,
+        "completion": 3e-07,
+        "image": 0.0,
+        "request": 0.0
+    },
+    "mistralai/codestral-mamba": {
+        "prompt": 2.5e-07,
+        "completion": 2.5e-07,
+        "image": 0.0,
+        "request": 0.0
+    },
+    "codestral-mamba": {
+        "prompt": 2.5e-07,
+        "completion": 2.5e-07,
+        "image": 0.0,
+        "request": 0.0
+    },
+    "openai/gpt-4o-mini": {
+        "prompt": 1.5e-07,
+        "completion": 6e-07,
+        "image": 0.007225,
+        "request": 0.0
+    },
+    "gpt-4o-mini": {
+        "prompt": 1.5e-07,
+        "completion": 6e-07,
+        "image": 0.007225,
+        "request": 0.0
+    },
+    "openai/gpt-4o-mini-2024-07-18": {
+        "prompt": 1.5e-07,
+        "completion": 6e-07,
+        "image": 0.007225,
+        "request": 0.0
+    },
+    "gpt-4o-mini-2024-07-18": {
+        "prompt": 1.5e-07,
+        "completion": 6e-07,
+        "image": 0.007225,
+        "request": 0.0
+    },
+    "qwen/qwen-2-7b-instruct": {
+        "prompt": 7e-08,
+        "completion": 7e-08,
+        "image": 0.0,
+        "request": 0.0
+    },
+    "qwen-2-7b-instruct": {
+        "prompt": 7e-08,
+        "completion": 7e-08,
+        "image": 0.0,
+        "request": 0.0
+    },
+    "google/gemma-2-27b-it": {
+        "prompt": 2.7e-07,
+        "completion": 2.7e-07,
+        "image": 0.0,
+        "request": 0.0
+    },
+    "gemma-2-27b-it": {
+        "prompt": 2.7e-07,
+        "completion": 2.7e-07,
+        "image": 0.0,
+        "request": 0.0
+    },
+    "nousresearch/hermes-2-theta-llama-3-8b": {
+        "prompt": 1.875e-07,
+        "completion": 1.125e-06,
+        "image": 0.0,
+        "request": 0.0
+    },
+    "hermes-2-theta-llama-3-8b": {
+        "prompt": 1.875e-07,
+        "completion": 1.125e-06,
+        "image": 0.0,
+        "request": 0.0
+    },
+    "alpindale/magnum-72b": {
+        "prompt": 3.75e-06,
+        "completion": 4.5e-06,
+        "image": 0.0,
+        "request": 0.0
+    },
+    "magnum-72b": {
+        "prompt": 3.75e-06,
+        "completion": 4.5e-06,
+        "image": 0.0,
+        "request": 0.0
+    },
     "google/gemma-2-9b-it": {
-        "prompt": 2e-07,
-        "completion": 2e-07,
+        "prompt": 8e-08,
+        "completion": 8e-08,
         "image": 0.0,
         "request": 0.0
     },
     "gemma-2-9b-it": {
-        "prompt": 2e-07,
-        "completion": 2e-07,
+        "prompt": 8e-08,
+        "completion": 8e-08,
         "image": 0.0,
         "request": 0.0
     },
@@ -119,6 +215,18 @@
         "image": 0.0,
         "request": 0.0
     },
+    "qwen/qwen-2-7b-instruct:free": {
+        "prompt": 0.0,
+        "completion": 0.0,
+        "image": 0.0,
+        "request": 0.0
+    },
+    "qwen-2-7b-instruct:free": {
+        "prompt": 0.0,
+        "completion": 0.0,
+        "image": 0.0,
+        "request": 0.0
+    },
     "microsoft/phi-3-medium-4k-instruct": {
         "prompt": 1.4e-07,
         "completion": 1.4e-07,
@@ -130,18 +238,6 @@
         "completion": 1.4e-07,
         "image": 0.0,
         "request": 0.0
-    },
-    "bigcode/starcoder2-15b-instruct": {
-        "prompt": null,
-        "completion": null,
-        "request": null,
-        "image": null
-    },
-    "starcoder2-15b-instruct": {
-        "prompt": null,
-        "completion": null,
-        "request": null,
-        "image": null
     },
     "cognitivecomputations/dolphin-mixtral-8x22b": {
         "prompt": 9e-07,
@@ -180,26 +276,26 @@
         "request": 0.0
     },
     "mistralai/mistral-7b-instruct": {
-        "prompt": 6.5e-08,
-        "completion": 6.5e-08,
+        "prompt": 6e-08,
+        "completion": 6e-08,
         "image": 0.0,
         "request": 0.0
     },
     "mistral-7b-instruct": {
-        "prompt": 6.5e-08,
-        "completion": 6.5e-08,
+        "prompt": 6e-08,
+        "completion": 6e-08,
         "image": 0.0,
         "request": 0.0
     },
     "mistralai/mistral-7b-instruct-v0.3": {
-        "prompt": 6.5e-08,
-        "completion": 6.5e-08,
+        "prompt": 6e-08,
+        "completion": 6e-08,
         "image": 0.0,
         "request": 0.0
     },
     "mistral-7b-instruct-v0.3": {
-        "prompt": 6.5e-08,
-        "completion": 6.5e-08,
+        "prompt": 6e-08,
+        "completion": 6e-08,
         "image": 0.0,
         "request": 0.0
     },
@@ -362,25 +458,25 @@
     "openai/gpt-4o": {
         "prompt": 5e-06,
         "completion": 1.5e-05,
-        "image": 0.002312,
+        "image": 0.007225,
         "request": 0.0
     },
     "gpt-4o": {
         "prompt": 5e-06,
         "completion": 1.5e-05,
-        "image": 0.002312,
+        "image": 0.007225,
         "request": 0.0
     },
     "openai/gpt-4o-2024-05-13": {
         "prompt": 5e-06,
         "completion": 1.5e-05,
-        "image": 0.002312,
+        "image": 0.007225,
         "request": 0.0
     },
     "gpt-4o-2024-05-13": {
         "prompt": 5e-06,
         "completion": 1.5e-05,
-        "image": 0.002312,
+        "image": 0.007225,
         "request": 0.0
     },
     "meta-llama/llama-3-8b": {
@@ -417,18 +513,6 @@
         "prompt": 1.5e-07,
         "completion": 1.5e-07,
         "image": 0.0,
-        "request": 0.0
-    },
-    "liuhaotian/llava-yi-34b": {
-        "prompt": 9e-07,
-        "completion": 9e-07,
-        "image": 0.0005184,
-        "request": 0.0
-    },
-    "llava-yi-34b": {
-        "prompt": 9e-07,
-        "completion": 9e-07,
-        "image": 0.0005184,
         "request": 0.0
     },
     "allenai/olmo-7b-instruct": {
@@ -636,26 +720,26 @@
         "request": 0.0
     },
     "meta-llama/llama-3-8b-instruct": {
-        "prompt": 6.3e-08,
-        "completion": 6.3e-08,
+        "prompt": 6e-08,
+        "completion": 6e-08,
         "image": 0.0,
         "request": 0.0
     },
     "llama-3-8b-instruct": {
-        "prompt": 6.3e-08,
-        "completion": 6.3e-08,
+        "prompt": 6e-08,
+        "completion": 6e-08,
         "image": 0.0,
         "request": 0.0
     },
     "meta-llama/llama-3-70b-instruct": {
-        "prompt": 5.5e-07,
-        "completion": 7.6e-07,
+        "prompt": 5.2e-07,
+        "completion": 7.5e-07,
         "image": 0.0,
         "request": 0.0
     },
     "llama-3-70b-instruct": {
-        "prompt": 5.5e-07,
-        "completion": 7.6e-07,
+        "prompt": 5.2e-07,
+        "completion": 7.5e-07,
         "image": 0.0,
         "request": 0.0
     },
@@ -672,14 +756,14 @@
         "request": 0.0
     },
     "microsoft/wizardlm-2-8x22b": {
-        "prompt": 6.4e-07,
-        "completion": 6.4e-07,
+        "prompt": 6.3e-07,
+        "completion": 6.3e-07,
         "image": 0.0,
         "request": 0.0
     },
     "wizardlm-2-8x22b": {
-        "prompt": 6.4e-07,
-        "completion": 6.4e-07,
+        "prompt": 6.3e-07,
+        "completion": 6.3e-07,
         "image": 0.0,
         "request": 0.0
     },
@@ -706,18 +790,6 @@
         "completion": 7e-08,
         "image": 0.0,
         "request": 0.0
-    },
-    "huggingfaceh4/zephyr-orpo-141b-a35b": {
-        "prompt": null,
-        "completion": null,
-        "request": null,
-        "image": null
-    },
-    "zephyr-orpo-141b-a35b": {
-        "prompt": null,
-        "completion": null,
-        "request": null,
-        "image": null
     },
     "mistralai/mixtral-8x22b": {
         "prompt": 1.08e-06,
@@ -872,18 +944,6 @@
     "mistral-7b-instruct:nitro": {
         "prompt": 7e-08,
         "completion": 7e-08,
-        "image": 0.0,
-        "request": 0.0
-    },
-    "meta-llama/llama-2-70b-chat:nitro": {
-        "prompt": 9e-07,
-        "completion": 9e-07,
-        "image": 0.0,
-        "request": 0.0
-    },
-    "llama-2-70b-chat:nitro": {
-        "prompt": 9e-07,
-        "completion": 9e-07,
         "image": 0.0,
         "request": 0.0
     },
@@ -1043,18 +1103,6 @@
         "image": 0.0,
         "request": 0.0
     },
-    "01-ai/yi-34b-200k": {
-        "prompt": null,
-        "completion": null,
-        "request": null,
-        "image": null
-    },
-    "yi-34b-200k": {
-        "prompt": null,
-        "completion": null,
-        "request": null,
-        "image": null
-    },
     "undi95/remm-slerp-l2-13b:extended": {
         "prompt": 1.125e-06,
         "completion": 1.125e-06,
@@ -1068,14 +1116,14 @@
         "request": 0.0
     },
     "nousresearch/nous-hermes-2-mixtral-8x7b-dpo": {
-        "prompt": 2.7e-07,
-        "completion": 2.7e-07,
+        "prompt": 4.5e-07,
+        "completion": 4.5e-07,
         "image": 0.0,
         "request": 0.0
     },
     "nous-hermes-2-mixtral-8x7b-dpo": {
-        "prompt": 2.7e-07,
-        "completion": 2.7e-07,
+        "prompt": 4.5e-07,
+        "completion": 4.5e-07,
         "image": 0.0,
         "request": 0.0
     },
@@ -1139,18 +1187,6 @@
         "image": 0.0,
         "request": 0.0
     },
-    "jondurbin/bagel-34b": {
-        "prompt": null,
-        "completion": null,
-        "request": null,
-        "image": null
-    },
-    "bagel-34b": {
-        "prompt": null,
-        "completion": null,
-        "request": null,
-        "image": null
-    },
     "neversleep/noromaid-mixtral-8x7b-instruct": {
         "prompt": 8e-06,
         "completion": 8e-06,
@@ -1176,26 +1212,26 @@
         "request": 0.0
     },
     "mistralai/mistral-7b-instruct-v0.2": {
-        "prompt": 7e-08,
-        "completion": 7e-08,
+        "prompt": 6e-08,
+        "completion": 6e-08,
         "image": 0.0,
         "request": 0.0
     },
     "mistral-7b-instruct-v0.2": {
-        "prompt": 7e-08,
-        "completion": 7e-08,
+        "prompt": 6e-08,
+        "completion": 6e-08,
         "image": 0.0,
         "request": 0.0
     },
     "cognitivecomputations/dolphin-mixtral-8x7b": {
-        "prompt": 2.4e-07,
-        "completion": 2.4e-07,
+        "prompt": 5e-07,
+        "completion": 5e-07,
         "image": 0.0,
         "request": 0.0
     },
     "dolphin-mixtral-8x7b": {
-        "prompt": 2.4e-07,
-        "completion": 2.4e-07,
+        "prompt": 5e-07,
+        "completion": 5e-07,
         "image": 0.0,
         "request": 0.0
     },
@@ -1224,14 +1260,14 @@
         "request": 0.0
     },
     "mistralai/mixtral-8x7b": {
-        "prompt": 5e-07,
-        "completion": 5e-07,
+        "prompt": 5.4e-07,
+        "completion": 5.4e-07,
         "image": 0.0,
         "request": 0.0
     },
     "mixtral-8x7b": {
-        "prompt": 5e-07,
-        "completion": 5e-07,
+        "prompt": 5.4e-07,
+        "completion": 5.4e-07,
         "image": 0.0,
         "request": 0.0
     },
@@ -1355,30 +1391,6 @@
         "image": 0.0,
         "request": 0.0
     },
-    "nousresearch/nous-hermes-2-vision-7b": {
-        "prompt": null,
-        "completion": null,
-        "request": null,
-        "image": null
-    },
-    "nous-hermes-2-vision-7b": {
-        "prompt": null,
-        "completion": null,
-        "request": null,
-        "image": null
-    },
-    "openrouter/cinematika-7b": {
-        "prompt": null,
-        "completion": null,
-        "request": null,
-        "image": null
-    },
-    "cinematika-7b": {
-        "prompt": null,
-        "completion": null,
-        "request": null,
-        "image": null
-    },
     "nousresearch/nous-capybara-7b": {
         "prompt": 1.8e-07,
         "completion": 1.8e-07,
@@ -1402,18 +1414,6 @@
         "completion": 0.0,
         "image": 0.0,
         "request": 0.0
-    },
-    "jebcarter/psyfighter-13b": {
-        "prompt": null,
-        "completion": null,
-        "request": null,
-        "image": null
-    },
-    "psyfighter-13b": {
-        "prompt": null,
-        "completion": null,
-        "request": null,
-        "image": null
     },
     "openchat/openchat-7b": {
         "prompt": 7e-08,
@@ -1544,30 +1544,6 @@
     "openhermes-2.5-mistral-7b": {
         "prompt": 1.7e-07,
         "completion": 1.7e-07,
-        "image": 0.0,
-        "request": 0.0
-    },
-    "liuhaotian/llava-13b": {
-        "prompt": null,
-        "completion": null,
-        "request": null,
-        "image": null
-    },
-    "llava-13b": {
-        "prompt": null,
-        "completion": null,
-        "request": null,
-        "image": null
-    },
-    "nousresearch/nous-capybara-34b": {
-        "prompt": 9e-07,
-        "completion": 9e-07,
-        "image": 0.0,
-        "request": 0.0
-    },
-    "nous-capybara-34b": {
-        "prompt": 9e-07,
-        "completion": 9e-07,
         "image": 0.0,
         "request": 0.0
     },
@@ -1728,16 +1704,16 @@
         "request": 0.0
     },
     "jondurbin/airoboros-l2-70b": {
-        "prompt": null,
-        "completion": null,
-        "request": null,
-        "image": null
+        "prompt": 5e-07,
+        "completion": 5e-07,
+        "image": 0.0,
+        "request": 0.0
     },
     "airoboros-l2-70b": {
-        "prompt": null,
-        "completion": null,
-        "request": null,
-        "image": null
+        "prompt": 5e-07,
+        "completion": 5e-07,
+        "image": 0.0,
+        "request": 0.0
     },
     "gryphe/mythomax-l2-13b:extended": {
         "prompt": 1.125e-06,
@@ -1750,18 +1726,6 @@
         "completion": 1.125e-06,
         "image": 0.0,
         "request": 0.0
-    },
-    "nousresearch/nous-hermes-llama2-70b": {
-        "prompt": null,
-        "completion": null,
-        "request": null,
-        "image": null
-    },
-    "nous-hermes-llama2-70b": {
-        "prompt": null,
-        "completion": null,
-        "request": null,
-        "image": null
     },
     "xwin-lm/xwin-lm-70b": {
         "prompt": 3.75e-06,
@@ -1788,14 +1752,14 @@
         "request": 0.0
     },
     "mistralai/mistral-7b-instruct-v0.1": {
-        "prompt": 6.4e-08,
-        "completion": 6.4e-08,
+        "prompt": 6e-08,
+        "completion": 6e-08,
         "image": 0.0,
         "request": 0.0
     },
     "mistral-7b-instruct-v0.1": {
-        "prompt": 6.4e-08,
-        "completion": 6.4e-08,
+        "prompt": 6e-08,
+        "completion": 6e-08,
         "image": 0.0,
         "request": 0.0
     },
@@ -1810,18 +1774,6 @@
         "completion": 0.0,
         "image": 0.0,
         "request": 0.0
-    },
-    "migtissera/synthia-70b": {
-        "prompt": null,
-        "completion": null,
-        "request": null,
-        "image": null
-    },
-    "synthia-70b": {
-        "prompt": null,
-        "completion": null,
-        "request": null,
-        "image": null
     },
     "pygmalionai/mythalion-13b": {
         "prompt": 1.125e-06,
@@ -1918,18 +1870,6 @@
         "completion": 2.25e-06,
         "image": 0.0,
         "request": 0.0
-    },
-    "huggingfaceh4/zephyr-7b-beta": {
-        "prompt": null,
-        "completion": null,
-        "request": null,
-        "image": null
-    },
-    "zephyr-7b-beta": {
-        "prompt": null,
-        "completion": null,
-        "request": null,
-        "image": null
     },
     "anthropic/claude-2.0": {
         "prompt": 8e-06,
@@ -2052,14 +1992,14 @@
         "request": 0.0
     },
     "gryphe/mythomax-l2-13b": {
-        "prompt": 1.19e-07,
-        "completion": 1.19e-07,
+        "prompt": 1e-07,
+        "completion": 1e-07,
         "image": 0.0,
         "request": 0.0
     },
     "mythomax-l2-13b": {
-        "prompt": 1.19e-07,
-        "completion": 1.19e-07,
+        "prompt": 1e-07,
+        "completion": 1e-07,
         "image": 0.0,
         "request": 0.0
     },

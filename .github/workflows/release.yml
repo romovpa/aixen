@@ -6,7 +6,8 @@ on:
       - 'v*.*.*'  # Matches tags like v1.0.0, v1.2.3, etc.
 
 jobs:
-  deploy:
+
+  publish:
     runs-on: ubuntu-latest
 
     steps:

@@ -22,3 +22,5 @@ if __name__ == "__main__":
     with ai.Context() as context:
         print(f"2 + 3 = {add(2, 3)}")
         print(f"Factorial of 5 = {factorial(5)}")
+
+        print(f"Cost: ${context.usage_cost_usd}")

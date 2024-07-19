@@ -9,7 +9,7 @@ from datetime import datetime
 from functools import wraps
 from pathlib import Path
 from tempfile import TemporaryDirectory
-from typing import Any, Optional
+from typing import Any
 
 import httpx
 from dotenv import dotenv_values
@@ -117,7 +117,7 @@ class Context:
     """
 
     id: str
-    environment: dict[str, Optional[str]]
+    environment: dict[str, str | None]
     settings: dict[str, Any]
     context_dir: str
     calls: list[dict[str, Any]]
@@ -126,10 +126,10 @@ class Context:
 
     def __init__(
         self,
-        id: Optional[str] = None,
-        name: Optional[str] = None,
-        environment: Optional[dict[str, Optional[str]] | str] = None,
-        settings: Optional[dict[str, Any] | str] = None,
+        id: str | None = None,
+        name: str | None = None,
+        environment: dict[str, str | None] | str | None = None,
+        settings: dict[str, Any] | str | None = None,
         keep_files: bool = False,
     ):
         # Context management
@@ -226,10 +226,10 @@ class Context:
 
     def save(
         self,
-        obj: Optional[Any] = None,
-        name: Optional[str] = None,
-        ext: Optional[str] = None,
-        url: Optional[str] = None,
+        obj: Any | None = None,
+        name: str | None = None,
+        ext: str | None = None,
+        url: str | None = None,
         share: bool = False,
     ) -> File:
         """
@@ -364,7 +364,7 @@ def urlretrieve(url: str, filename: str) -> None:
 
 
 def get_parent_processor_call(
-    current_call_id: Optional[str] = None,
+    current_call_id: str | None = None,
 ) -> dict[str, Any] | None:
     frame = inspect.currentframe()
     while frame:
@@ -441,10 +441,10 @@ def processor(func):
 
 
 def save(
-    obj: Optional[Any] = None,
-    name: Optional[str] = None,
-    ext: Optional[str] = None,
-    url: Optional[str] = None,
+    obj: Any | None = None,
+    name: str | None = None,
+    ext: str | None = None,
+    url: str | None = None,
     share: bool = False,
 ) -> File:
     """

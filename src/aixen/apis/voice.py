@@ -1,5 +1,4 @@
 import base64
-from typing import Optional
 
 import httpx
 from loguru import logger
@@ -33,9 +32,9 @@ class ElevenlabsUsage(Usage):
 @processor
 def elevenlabs_generate(
     text: str,
-    model_id: Optional[str] = None,
-    voice_id: Optional[str] = None,
-    voice_settings: Optional[dict[str, float]] = None,
+    model_id: str | None = None,
+    voice_id: str | None = None,
+    voice_settings: dict[str, float] | None = None,
 ) -> GeneratedVoice:
     """
     Synthesise speech using the ElevenLabs API.

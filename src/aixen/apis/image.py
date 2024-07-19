@@ -1,4 +1,4 @@
-from typing import Any, Optional
+from typing import Any
 
 import replicate
 from pydantic import AnyUrl
@@ -21,7 +21,7 @@ REPLICATE_DEFAULT_SETTINGS = {
 def replicate_generate(
     prompt: str,
     model_name: str = REPLICATE_DEFAULT_MODEL_NAME,
-    settings: Optional[dict[str, Any]] = None,
+    settings: dict[str, Any] | None = None,
 ) -> AnyUrl:
     """
     Generate an image using the Replicate API.

@@ -1,8 +1,9 @@
 import importlib.resources as pkg_resources
 import inspect
 import json
+from collections.abc import Callable
 from functools import wraps
-from typing import Callable, Optional, TypeVar
+from typing import TypeVar
 
 import httpx
 import pydantic
@@ -17,7 +18,7 @@ from aixen.context import (
     processor,
 )
 
-DEFAULT_MODEL = "gpt-4o"
+DEFAULT_MODEL = "openai:gpt-4o-mini"
 
 
 # TODO: Add type hints and better structure after the API is finalized
@@ -64,7 +65,7 @@ class ChatCompletionUsage(Usage):
 def chat_generate(
     system: str,
     messages: list[dict],
-    model_name: Optional[str] = None,
+    model_name: str | None = None,
     temperature: float = 0.0,
 ) -> str:
     """
@@ -106,7 +107,7 @@ def chat_generate_structured(
     system: str,
     messages: list[dict],
     output_type: type[T],
-    model_name: Optional[str] = None,
+    model_name: str | None = None,
     temperature: float = 0.0,
 ) -> T:
     context = get_context()
@@ -137,7 +138,7 @@ def chat_generate_structured(
     return result.answer
 
 
-def chat_func(func: Callable, model: Optional[str] = None) -> Callable:
+def chat_func(func: Callable, model: str | None = None) -> Callable:
     """
     Decorator that converts creates LLM-based processor based on function signature
     and docstring.
@@ -204,7 +205,7 @@ def _resolve_provider(context: Context, model_name: str) -> tuple[OpenAI, str]:
     return client, model_name
 
 
-def _resolve_model(context: Context, model_name: Optional[str] = None) -> str:
+def _resolve_model(context: Context, model_name: str | None = None) -> str:
     """
     Resolves the model name using the aliases from the settings.
     >>> settings = {
